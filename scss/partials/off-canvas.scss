@@ -1,0 +1,37 @@
+﻿//Off Canvas Menu
+.off-canvas {
+    background:$bunker;
+    height:100%;
+}
+ul.vertical {
+    display:block;
+    margin-top:50px;
+    li {
+        border-bottom:1px solid #000;
+        padding:15px 0;
+        .leaf {
+            padding: 0;
+            margin: 9px 20px;
+            float:right;
+        }
+        &:hover, &:focus, &:active {
+            .leaf {
+                background-color: $black-russian;
+            }
+        }
+        a {
+            font-family:$oswald;
+            text-align:left;
+            &:hover, &:focus, &:active {
+                color:$azure;
+            }
+        }
+    }
+    li:before {
+        content:" ";
+        position:absolute;
+        z-index: -1;
+        top:5px;
+        border-top:1px solid #666666;
+    }
+}

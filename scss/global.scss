@@ -1,0 +1,40 @@
+@import "app.scss";
+@import "variables.scss";
+@import "slick-carousel.css";
+
+section {
+    padding:40px 0;
+}
+
+h1, h2 {
+    font-family: $oswald;
+    text-align:center;
+    font-size:2rem;
+}
+
+h3 {
+    font-family: $oswald;
+    font-size:1.3em;
+    text-align:center;
+}
+
+ul {
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+}
+
+.medium-4 {
+    text-align:center;
+}
+
+svg {
+    width:100px;
+}
+
+button {
+    background:none;
+    &:hover, &:active {
+        background:none;
+    }
+}

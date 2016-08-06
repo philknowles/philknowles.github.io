@@ -1,0 +1,614 @@
+@import "app.scss";
+@import "variables.scss";
+@import "global.scss";
+@import "slick-carousel.css";
+
+
+//Off Canvas Menu
+.off-canvas {
+    background:$bunker;
+    height:100%;
+}
+ul.vertical {
+    display:block;
+    margin-top:50px;
+    li {
+        border-bottom:1px solid #000;
+        padding:15px 0;
+        .leaf {
+            padding: 0;
+            margin: 9px 20px;
+            float:right;
+        }
+        &:hover, &:focus, &:active {
+            .leaf {
+                background-color: $black-russian;
+            }
+        }
+        a {
+            font-family:$oswald;
+            text-align:left;
+            &:hover, &:focus, &:active {
+                color:$azure;
+            }
+        }
+    }
+    li:before {
+        content:" ";
+        position:absolute;
+        z-index: -1;
+        top:5px;
+        border-top:1px solid #666666;
+    }
+}
+
+header {
+        position:fixed;
+        top: 0;
+        z-index:99;
+        width:100%;
+        transition: top 0.2s ease-in-out;
+    padding:15px 0 0;
+    background:$black-russian;
+    .logo {
+        font-family:$oswald;
+        @include fontSize(20px);
+        line-height:21px;
+    }
+    a {
+        color:$white;
+        &:hover, &:focus, &:active {
+            color:$white;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+    }
+}
+header nav {
+        display:none;
+        @media(min-width:1024px) {
+            display:block;
+            a {
+                padding: 10px;
+                font-family:$oswald;
+                &:hover, &:focus, &:active {
+                    background: $limerick;
+                    border-radius: $buttons;
+                    color:$black-russian;
+                }
+            }
+    }
+}
+
+.nav-up {
+    top: -505px;
+}
+
+.leaf {
+    width:20px;
+    height:20px;
+    margin-right:15px;
+    background-color:$limerick;
+    float:left;
+    border-radius: $buttons;
+}
+
+
+//Mobile Menu
+//This class resets the button for the hamburger menu
+.button {
+    float:right;
+    background:none;
+    position: relative;
+    top: -23px;
+    right: 15px;
+    margin:0;
+    &:hover, &:focus, &:active {
+        background:none;
+    }
+    @media (min-width: 1024px) {
+        display:none;
+    }
+}
+
+//This id sets the hamburger menu
+#hamburger span { position: absolute; left: -2px; top: 9px; }
+
+#hamburger span, 
+#hamburger span:before,
+#hamburger span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: $limerick;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#hamburger span:before {
+  top: -10px;
+}
+#hamburger span:after {
+  bottom: -10px; 
+}
+
+.hero {
+    background: url(/images/photos/wood-nature-dark-forest.jpg) no-repeat;
+    background-size:cover;
+    background-position:56% 100%;
+    background-color:$black-russian;
+    background-blend-mode:luminosity;
+    width:100%;
+    height:450px;
+    h2 {
+        text-transform:uppercase;
+        text-shadow: 0 0 10px #000;
+        font-weight: 700;
+    }
+    p {
+        display:none;
+        width:90%;
+        margin:0 auto;
+        text-shadow: 0 0 5px #000;
+        font-size: 20px;
+    }
+    @media(min-width:768px) {
+        padding-top:55px;
+        height:750px;
+        p {
+            display:block;
+            width:100%;
+            font-size: 25px;
+        }
+    }
+}
+.about .hero {
+    background: url(/images/photos/black-and-white-coffee-cup-mug.jpg) no-repeat;
+    background-size:cover;
+    background-position:50% 55%;
+    background-color:$black-russian;
+    background-blend-mode:luminosity;
+    max-height:300px;
+    @media(min-width:768px) {
+        background-position:56% 55%;
+        max-height:550px;
+    }
+}
+.portfolio .hero {
+    background: url(/images/photos/pexels-portfolio.jpg) no-repeat;
+    background-size:cover;
+    background-position:56% 35%;
+    background-color:$black-russian;
+    background-blend-mode:luminosity;
+    max-height:450px;
+    @media(min-width:768px) {
+        background-position:56% 55%;
+        max-height:550px;
+    }
+}
+.myFlix .hero {
+    background: url(/images/th-myFlix.jpg) no-repeat;
+    background-size:cover;
+    background-position:56% 55%;
+    background-color:$black-russian;
+    background-blend-mode:luminosity;
+    max-height:450px;
+    @media(min-width:768px) {
+        background-position:56% 55%;
+        max-height:550px;
+    }
+}
+.contact-page .hero {
+    background: url(/images/photos/black-and-white-coffee-cup-mug.jpg) no-repeat;
+    background-size:cover;
+    background-position:50% 55%;
+    background-color:$black-russian;
+    background-blend-mode:luminosity;
+    max-height:300px;
+    @media(min-width:768px) {
+        background-position:56% 55%;
+        max-height:550px;
+    }
+}
+
+.tagline, a {
+    padding:10% 0 0;
+    margin:0 auto;
+    color:$white;
+    text-align:center;
+}
+.sub-nav {
+    display:block;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    @media (min-width: 768px) {
+        display:flex;
+        width: 350px;
+    }
+}
+.tagline a {
+    display:block;
+    padding:15px;
+    margin:15px auto;
+    width:150px;
+    text-align:center;
+    border-radius: $buttons;
+    background: $limerick;
+    font-family:$oswald;
+    &:hover, &:focus, &:active {
+        background:$bunker;
+        color:$white;
+    }
+}
+
+.intro {
+    text-align:center;
+    background:$azure;
+    font-size:1rem;
+    padding-bottom:35px;
+    p {
+        line-height:2.5rem;
+        padding:0 6%;
+    }
+    @media only screen and (min-width:768px) {
+        p {
+            text-align:center;
+            padding:0 14%;
+        }
+    }
+}
+
+aside.intro {
+    background:$bunker;
+    color:$white;
+    text-align:center;
+    font-size:1rem;
+    padding:35px 0;
+    p {
+        line-height:2.5rem;
+        padding:0 6%;
+    }
+    @media only screen and (min-width:768px) {
+        p {
+            text-align:center;
+            padding:0 14%;
+        }
+    }
+}
+
+.main-section {
+}
+
+.toolkit {
+    text-align:center;
+    margin:0 auto;
+    color:$black;
+    h2 {
+        padding-bottom:40px;
+    }
+    h3 {
+        width:100%;
+        margin-bottom:10px;
+        padding:10px;
+        color:$black;
+        background:$limerick;
+        border-radius:$buttons;
+    }
+}
+
+.featured-projects {
+    text-align:center;
+    cursor:pointer;
+    .columns {
+        position:relative;
+        padding-left:0;
+        padding-right:0;
+    }
+    figure {
+        margin:0;
+        overflow:hidden;
+    }
+    figure img {
+        position:relative;
+        top:0;
+        left:0;
+        transition: transform 0.4s;
+    }
+    figure:hover img {
+        transform: translateY(-50px);
+    }
+    figcaption {
+        position:absolute;
+        top:0;
+        left:0;
+        background:$bunker;
+        color:$white;
+
+        transform: translateY(100%);
+        transition: transform 0.4s, opacity 0.1s 0.3s;
+    }
+    figcaption {
+        height: 100px;
+	    width: 100%;
+	    top: auto;
+	    bottom: 0;
+	    opacity: 0;
+	    transform: translateY(100%);
+	    transition: transform 0.4s, opacity 0.1s 0.3s;
+    }
+    figure:hover figcaption {
+        opacity:1;
+        transform: translate(0px);
+        transition: transform 0.4s, opacity 0.1s;
+    }
+    figcaption h3 {
+        position:absolute;
+        bottom:auto;
+        top:30px;
+        left:20px;
+        width:40%;
+        font-size:1em;
+        @media(min-width:420px) {
+            bottom:28%;
+            top:35px;
+            left:20px;
+            width:auto;
+            font-size:1.3em;
+        }
+    }
+    figcaption a {
+        border-radius:$buttons;
+        background-color:$limerick;
+        color:$white;
+        font-family:$oswald;
+        padding:15px;
+        position:absolute;
+        bottom:23%;
+        right:20px;
+        &:hover {
+            background:$azure;
+            color:$black;
+        }
+    }
+}
+
+.site-details {
+    text-align:center;
+    h3 {
+        text-align:left;
+    }
+    p {
+        line-height:2.5rem;
+        padding:0 14%;
+    }
+    ul {
+        display:block;
+        text-align:left;
+        padding:0 0 15px; margin:0;
+    }
+}
+
+.clients {
+    clear:both;
+    background-color:$azure;
+    color:$bunker;
+    padding:40px 0 10px;
+    cursor:pointer;
+}
+
+.contact {
+    clear:both;
+    border-top:2px solid $limerick;
+    background-color:$azure;
+    text-align:center;
+    overflow:auto;
+    a {
+        display:block;
+        width: 150px;
+        font-family:$oswald;
+        background-color:$limerick;
+        border-radius:$buttons;
+        padding: 15px 0;
+        &:hover, &:focus, &:active {
+            background:$bunker;
+            color:$white;
+        }
+   }
+}
+
+footer {
+    overflow:auto;
+    background:$black-russian;
+    color:$white;
+    padding:15px 0;
+    margin:0;
+    .social {
+        text-align:center;
+    }
+    svg {
+        fill:$white;
+    }
+}
+
+.map-container {
+  /*@media only screen and (min-width: 768px) {
+    padding-top:57px;
+  }*/
+}
+
+#map {
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+  @media only screen and (min-width: 768px) {
+     height: 550px;
+  }
+}
+#inner {
+    height:450px;
+}
+
+//Resume
+.resume {
+    div {
+        margin-bottom:1rem;
+    }
+    h3, p {
+        margin-bottom:0;
+        text-align:center;
+    }
+    ul {
+        display:block;
+        padding:0;
+        margin:0;
+        text-align:center;
+    }
+    li {
+        padding-bottom:10px;
+    }
+}
+
+.details {
+    display:block;
+    position:absolute;
+    bottom:0;
+    margin:0;
+    padding:5px;
+    width:100%;
+    background:$limerick;
+    color:$white;
+    &:hover, &:focus, &:active {
+        background:$bunker;
+        color:$white;
+    }
+}
+
+//Google Map InfoWindow
+/*.gm-style-iw {
+	width: 252px !important;
+	top: 15px !important;
+	left: 0px !important;
+	background-color: #fff;
+	box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+	border: 1px solid rgba(72, 181, 233, 0.6);
+	border-radius: 2px 2px 10px 10px;
+}
+#iw-container {
+	margin-bottom: 10px;
+}
+#iw-container .iw-title {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 22px;
+	font-weight: 400;
+	padding: 10px;
+	background-color: $limerick;
+	color: white;
+	margin: 0;
+	border-radius: 2px 2px 0 0;
+}*/
+#iw-container {
+    h3 {
+        text-align:left;
+    }
+}
+
+#iw-container .iw-content {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+	margin-right: 1px;
+	padding: 5px 5px 20px 0;
+	max-height: 140px;
+	overflow-y: auto;
+	overflow-x: hidden;
+    p {
+        margin-bottom:0;
+    }
+}
+/*
+.iw-content img {
+	float: right;
+	margin: 0 5px 5px 10px;	
+}
+.iw-subTitle {
+	font-size: 16px;
+	font-weight: 700;
+	padding: 5px 0;
+}
+.iw-bottom-gradient {
+	position: absolute;
+	width: 326px;
+	height: 25px;
+	bottom: 10px;
+	right: 18px;
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}
+.iw-title {
+   width:252px;
+   font-size: 22px;
+   font-weight: 400;
+   padding: 10px;
+   background-color: $limerick;
+   color: $white;
+   border-radius: 2px 2px 0 0; 
+}
+
+.gm-style-iw {
+  width: 252px !important;
+  top: 0 !important;
+  left: 0 !important;
+  background-color: $white;
+  box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+  border-radius: 2px 2px 0 0;
+  p {
+      padding:0; margin:0;
+  }
+}*/
+
+
+//Portfolio
+.skill {
+    ul { 
+        list-style:none;
+        margin:0;
+        padding:0;
+        display:block;
+    }
+    li {
+        background:$limerick;
+        border-radius:$buttons;
+        color:$white;
+        padding:5px;
+        padding-bottom:3px;
+        text-align:center;
+   }
+}
+.main-content {
+    img {
+        border:2px solid $limerick;
+        margin-bottom:50px;
+     }   
+}
+
+.general-content {
+    p {
+      text-align:center;
+    }
+    a {
+        display:block;
+        width: 150px;
+        font-family:$oswald;
+        background-color:$limerick;
+        border-radius:$buttons;
+        padding: 15px 0;
+        &:hover, &:focus, &:active {
+            background:$bunker;
+            color:$white;
+        }
+   }
+}

@@ -1,0 +1,45 @@
+//Colors
+$black: #000;
+$white: #fff;
+$bunker: #23282e;
+$black-russian: #03040d;
+$azure: #edf3f3;
+$limerick: #93C01F;
+
+//Button Styles
+$buttons: 10px 0; 
+
+//Fonts
+$open-sans: 'Open Sans', sans-serif;
+$oswald: 'Oswald', sans-serif;
+$tradewinds: 'Mouse Memoirs', sans-serif;
+
+//Mixins
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+    font-size:$size;
+    font-size:calculateRem($size);
+}
+
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 37.5em)  { @content ; }
+
+  }
+}
