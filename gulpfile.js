@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var sass = require('gulp-sass');
 //edit gulpfile.js and add in line 6: require('es6-promise').polyfill();
 //install the missing dependency with: npm install es6-promise --save
 var promise = require('es6-promise').polyfill();

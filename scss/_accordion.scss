@@ -1,0 +1,229 @@
+﻿//Container of Accordion for positioning purposes
+.accordion-container {
+    width:100%;
+    max-width:870px;
+    margin:0 auto;
+    @include breakpoint(laptop) {
+        max-width:919px;
+    }
+}
+.section-accordion {
+    .section-subtitle {
+        padding-top:15px;
+    }
+    p {
+        max-width:870px;
+        margin:0 auto;
+        text-align:center;
+    }
+}
+.accordion .container{
+    background:#f6f6f5;
+    @include breakpoint(tablet) {
+        margin-bottom:8px;
+    }
+}
+.accordion, .entry-content {
+    @include breakpoint(tablet) {
+        float:none;
+        vertical-align:middle;
+        padding:20px;
+    }
+}
+.accordion {
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    p, ul li {
+        font-size:13px;
+    }
+    @include breakpoint(tablet) {
+        width:100%;
+//        max-width:800px;
+        margin:0 auto;
+        p {
+            font-size:13px;
+        }
+    }
+}
+.entry-icon {
+    display:table-cell;
+    table-layout:fixed;
+    text-align:center;
+    font-size:20px;
+    width:21px;
+    padding:0 5px;
+    color:$brand-blue-dark;
+    cursor:pointer;
+    text-align:center;
+    vertical-align:middle;
+    &::before{
+        font-weight:bold;
+        content: "+";
+    }
+}
+.entry-icon.active {
+        background-color:$brand-blue-dark;
+        color:$color-white;
+        width:21px;
+    @include breakpoint(tablet) {
+        background-color:$brand-blue-dark;
+        color:$color-white;
+    }
+}
+.entry-icon.active::before {
+        content: "-";
+        padding:0 23%;
+    @include breakpoint(tablet) {
+        position:static;
+    }
+}
+.entry-column {
+    display:table-cell;
+    padding-left:15px;
+    padding-bottom:20px;
+    width:100%;
+    @include breakpoint(tablet) {
+        padding:0;
+    }
+}
+.entry-program {
+    padding:5px 0;
+    h2 {
+        font-size:15px;
+        font-weight:bold;
+        margin:0;
+//        padding:28px; //original padding for accordion
+        padding:0 28px;
+        color:$brand-blue-dark;
+        font-weight:bold;
+        text-align:center;
+    }
+    p {
+        padding:0 7px;
+        margin:0;
+    }
+    @include breakpoint(tablet) {
+        display:block;
+        float:left;
+        width:30%;
+        margin-top:6%;
+        h2 {
+            text-align:left;
+        }
+    }
+    @include breakpoint(laptop) {
+        width:226px;
+        margin-top:4%;
+    }
+}
+.entry-description {
+    border-top:1px solid $brand-grey-light;
+    width:92%;
+    h3 {
+        font-size:13px;
+        font-weight:bold;
+        margin:0;
+        padding:10px 0 0;
+        text-transform:uppercase;
+        text-align:center;
+    }
+    p {
+        text-align:center;
+    }
+    @include breakpoint(tablet) {
+        display:block;
+        float:left;
+        color:$brand-blue-dark;
+        width:70%;
+        border-top:0;
+        border-left:1px solid $brand-grey-light;
+        padding:5px 27px;
+        margin:13px 0;
+        h3 {
+            text-align:left;
+            padding:0 0 0;
+        }
+        p {
+            text-align:left;
+            margin:7px 0 0;
+        }
+    }
+    @include breakpoint(laptop) {
+        width:68%; //550px
+    }
+}
+.entry-content {
+    clear:both;
+    h3 {
+        font-size:13px;
+        font-weight:bold;
+        margin:15px 0 0 8px;
+        padding:0 0 10px;
+        text-transform:uppercase;
+        text-align:left;
+    }
+    ul {
+        display:block;
+        width:100%;
+        list-style:none;
+        margin:0 0 0 8px;
+        padding:0 5px 0 0;
+        @include breakpoint(tablet) {
+            display:block;
+            float:left;
+            width:50%;
+            margin:0;
+            padding:0 5px 0 0;
+            font-size:13px;
+        }
+    }
+    .entry-program {
+        margin-top:0;
+        @include breakpoint(tablet) {
+            width:192px;
+        }
+    }
+    .entry-description {
+        border-top:0;
+        border-left:0;
+        @include breakpoint(tablet) {
+            width:67%;
+            padding:0 0 15px 8px;
+            margin:0 0 0 14px;
+        }
+        @include breakpoint(laptop) {
+            margin-left:34px;
+        }
+    }
+}
+/* Accordion Code */
+.no-accordian {
+    clear:both;
+    padding-top:10px;
+    padding-left:25px;
+    width:50%;
+}
+.entry-column-one, .entry-column-two {
+    @include breakpoint(tablet) {
+        display:block;
+        float:left;
+    }
+}
+.entry-column-one {
+    @include breakpoint(tablet) {
+        width:36%;
+    }
+    @include breakpoint(desktop) {
+        width:30%;
+    }
+}
+.entry-column-two {
+    @include breakpoint(tablet) {
+        width:47%;
+        margin-left:29px;
+    }
+    @include breakpoint(laptop) {
+        margin-left:15px;
+    }
+}

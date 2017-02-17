@@ -1,0 +1,23 @@
+{
+  "name": "philknowles.github.io",
+  "version": "2.0.0",
+  "description": "Personal Portfolio Website",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philknowles/philknowles.github.io.git"
+  },
+  "author": "Phil Knowles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philknowles/philknowles.github.io/issues"
+  },
+  "homepage": "https://github.com/philknowles/philknowles.github.io#readme"
+}
