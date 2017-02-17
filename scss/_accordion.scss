@@ -53,7 +53,7 @@
     font-size:20px;
     width:21px;
     padding:0 5px;
-    color:$brand-blue-dark;
+    color:$bunker;
     cursor:pointer;
     text-align:center;
     vertical-align:middle;
@@ -63,12 +63,12 @@
     }
 }
 .entry-icon.active {
-        background-color:$brand-blue-dark;
-        color:$color-white;
+        background-color:$bunker;
+        color:$white;
         width:21px;
     @include breakpoint(tablet) {
-        background-color:$brand-blue-dark;
-        color:$color-white;
+        background-color:$bunker;
+        color:$white;
     }
 }
 .entry-icon.active::before {
@@ -95,7 +95,7 @@
         margin:0;
 //        padding:28px; //original padding for accordion
         padding:0 28px;
-        color:$brand-blue-dark;
+        color:$bunker;
         font-weight:bold;
         text-align:center;
     }
@@ -114,11 +114,11 @@
     }
     @include breakpoint(laptop) {
         width:226px;
-        margin-top:4%;
+        margin-top:20px;
     }
 }
 .entry-description {
-    border-top:1px solid $brand-grey-light;
+    border-top:1px solid $limerick;
     width:92%;
     h3 {
         font-size:13px;
@@ -134,10 +134,10 @@
     @include breakpoint(tablet) {
         display:block;
         float:left;
-        color:$brand-blue-dark;
+        color:$bunker;
         width:70%;
         border-top:0;
-        border-left:1px solid $brand-grey-light;
+        border-left:1px solid $limerick;
         padding:5px 27px;
         margin:13px 0;
         h3 {
