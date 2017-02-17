@@ -91,12 +91,11 @@
     padding:5px 0;
     h2, h3 {
         font-size:15px;
-        font-weight:bold;
         margin:0;
 //        padding:28px; //original padding for accordion
         padding:0 28px;
         color:$bunker;
-        font-weight:bold;
+        font-weight:normal;
         text-align:center;
     }
     p {
@@ -157,7 +156,7 @@
     clear:both;
     h3 {
         font-size:13px;
-        font-weight:bold;
+        font-weight:normal;
         margin:15px 0 0 8px;
         padding:0 0 10px;
         text-transform:uppercase;
