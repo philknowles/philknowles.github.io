@@ -11,4 +11,4 @@
 //by default, the entry content is hidden.
 $('.entry-content').hide();
 // This line keeps the last container open by default until another accordion option is selected
-$('.container').find('.entry-content').eq(3).show();
+$('.container').find('.entry-content').eq(3).hide();
