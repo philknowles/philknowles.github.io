@@ -1,1 +1,22 @@
-﻿
+﻿.work-experience {
+    h2, h3 {
+        text-transform:uppercase;
+        text-align:left;
+        font-family:'Open Sans', sans-serif;
+        font-weight:normal;
+    }
+    h3 {
+        font-size:16px;
+    }
+
+    h4 {
+        font-size:20px;
+    }
+    ul {
+        display:block;
+        list-style:disc;
+    }
+    li {
+        padding:0;
+    }
+}

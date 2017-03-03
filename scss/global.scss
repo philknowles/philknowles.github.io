@@ -6,6 +6,10 @@ section {
     padding:40px 0;
 }
 
+hr.wide {
+    max-width:100%;
+}
+
 h1, h2 {
     font-family: $oswald;
     text-align:center;
