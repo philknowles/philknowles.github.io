@@ -219,6 +219,9 @@ header nav {
     margin:0 auto;
     color:$white;
     text-align:center;
+    &:hover, &:focus, &:active {
+        color:#ccc;
+    }
 }
 .sub-nav {
     display:block;
@@ -428,10 +431,20 @@ footer {
     margin:0;
     .social {
         text-align:center;
+        h3 {
+            font-size:20px;
+            font-weight:normal;
+            color:$limerick;
+            font-family:'Open Sans', sans-serif;
+        }
     }
     svg {
         fill:$white;
     }
+}
+
+.fine-print {
+    font-size:10px;
 }
 
 .map-container {
