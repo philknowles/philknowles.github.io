@@ -389,7 +389,7 @@ aside.intro {
     }
 }
 
-.column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+.featured-projects .column:last-child:not(:first-child), .featured-projects .columns:last-child:not(:first-child) {
     float:left;
 }
 
