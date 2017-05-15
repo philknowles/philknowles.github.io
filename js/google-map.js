@@ -13,7 +13,7 @@ function initMap() {
         zoom: 10,
         scrollwheel: false
     });
-    var iconBase = '/images/icon-marker.png';
+    var iconBase = '../images/icon-marker.png';
     var infowindow = new google.maps.InfoWindow();
     var marker, i;
 

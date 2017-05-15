@@ -89,3 +89,49 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+//Slick Buttons
+$('.btn-tcg').on('click', function () {
+    if ($('.col-tcg').is(':hidden')) {
+        $('.col-tcg').slideDown();
+        $('.job-description').not('.col-tcg').slideUp();
+    } else {
+        $('.col-tcg').slideUp();
+    }
+});
+
+$('.btn-con').on('click', function () {
+    if ($('.col-con').is(':hidden')) {
+        $('.col-con').slideDown();
+        $('.job-description').not('.col-con').slideUp();
+    } else {
+        $('.col-con').slideUp();
+    }
+});
+
+$('.btn-col').on('click', function () {
+    if ($('.col-col').is(':hidden')) {
+        $('.col-col').slideDown();
+        $('.job-description').not('.col-col').slideUp();
+    } else {
+        $('.col-col').slideUp();
+    }
+});
+
+$('.btn-thr').on('click', function () {
+    if ($('.col-thr').is(':hidden')) {
+        $('.col-thr').slideDown();
+        $('.job-description').not('.col-thr').slideUp();
+    } else {
+        $('.col-thr').slideUp();
+    }
+});
+
+$('.btn-fin').on('click', function () {
+    if ($('.col-fin').is(':hidden')) {
+        $('.col-fin').slideDown();
+        $('.job-description').not('.col-fin').slideUp();
+    } else {
+        $('.col-fin').slideUp();
+    }
+});
