@@ -91,6 +91,7 @@ function hasScrolled() {
 }
 
 //Slick Buttons
+$('.col-tcg').show();
 $('.btn-tcg').on('click', function () {
     if ($('.col-tcg').is(':hidden')) {
         $('.col-tcg').slideDown();
