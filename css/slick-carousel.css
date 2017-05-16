@@ -1,1 +1,1 @@
-.slick-prev,.slick-next{display:none !important}.slider{background-color:none}
+﻿.slider{background-color:none}.slick-prev{left:0;z-index:9999;top:10%;opacity:1;left:10px}.slick-prev:before{content:'‹';font-size:55px;opacity:1}.slick-next{right:0;top:10%;opacity:1;right:10px}.slick-next:before{content:'›';font-size:55px;opacity:1}
