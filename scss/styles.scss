@@ -86,13 +86,28 @@ header nav {
     top: -505px;
 }
 
-.leaf {
+header .leaf {
     width:20px;
     height:20px;
     margin-right:15px;
     background-color:$limerick;
     float:left;
     border-radius: $buttons;
+    animation-name: slideIn;
+    -webkit-animation-name: slideIn;
+    animation-duration: .8s;
+    -webkit-animation-duration: .8s;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+}
+
+@keyframes slideIn {
+    0% { margin:0 15px 0 0;}
+    20% { margin:1px 14px 0 1px;}
+    40% { margin:2px 13px 0 2px;}
+    60% { margin:3px 12px 0 3px;}
+    80% { margin:2px 13px 0 2px;}
+    100% { margin:1px 14px 0 1px;}
 }
 
 
@@ -214,7 +229,7 @@ header nav {
     }
 }
 
-.tagline, a {
+a {
     padding:10% 0 0;
     margin:0 auto;
     color:$white;
@@ -222,6 +237,13 @@ header nav {
     &:hover, &:focus, &:active {
         color:#ccc;
     }
+}
+
+.tagline {
+    padding:10% 0 0;
+    margin:0 auto;
+    color:$white;
+    text-align:center;
 }
 .sub-nav {
     display:block;
