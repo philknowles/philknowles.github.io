@@ -6,7 +6,8 @@ function initMap() {
       ['<div id="iw-container"><h3 class="iw-title">The Creative Group</h3><div class="iw-content"><p class="role">Senior Front End Consultant</p><p class="location">Nicollet Mall<br/>Suite 2700<br/>Minneapolis, MN</p><p class="employed">May 2016 - Present</p></div><p><a class="details" href="#tcg">Get Details</a></p></div>', 44.9753855, -93.2762284, 2],
       ['<div id="iw-container"><h3 class="iw-title">Collegis Education</h3><div class="iw-content"><p class="role">The Creative Group</p><p class="location">8300 Norman Center Drive<br/>#400<br/>Collegis Education</p><p class="employed">June 2016 - February 2017</p></div><p><a class="details" href="#ce">Get Details</a></p></div>', 44.8526801, -93.3552383, 2],
       ['<div id="iw-container"><h3 class="iw-title">MMIC/Constellation</h3><div class="iw-content"><p class="role">The Creative Group</p><p class="location">7701 France Avenue.<br/>#500<br/>Bloomington, MN 55435<br/></p><p class="employed">March 2017 - May 2017</p></div><p><a class="details" href="#ce">Get Details</a></p></div>', 44.863653, -93.327256, 2],
-      ['<div id="iw-container"><h3 class="iw-title">Embroidery Library</h3><div class="iw-content"><p class="role">The Creative Group</p><p class="location">5000 Cheshire Pkwy #3<br/>#500<br/>Plymouth, MN 55446<br/></p><p class="employed">July 2017 - Present</p></div><p><a class="details" href="#">Get Details</a></p></div>', 45.044332, -93.4584499, 2]
+      ['<div id="iw-container"><h3 class="iw-title">Embroidery Library</h3><div class="iw-content"><p class="role">The Creative Group</p><p class="location">5000 Cheshire Pkwy #3<br/>#500<br/>Plymouth, MN 55446<br/></p><p class="employed">July 2017 - Present</p></div><p><a class="details" href="#">Get Details</a></p></div>', 45.044332, -93.4584499, 2],
+      ['<div id="iw-container"><h3 class="iw-title">Fish & Richardson</h3><div class="iw-content"><p class="role">The Creative Group</p><p class="location">60 South 6th St<br/>Minneapolis, MN 55402<br/></p><p class="employed">July 2017 - Present</p></div><p><a class="details" href="#">Get Details</a></p></div>', 44.977748, -93.2730057, 2]
     ];
     var mapDiv = document.getElementById('map');
     var map = new google.maps.Map(mapDiv, {
@@ -14,7 +15,7 @@ function initMap() {
         zoom: 10,
         scrollwheel: false
     });
-    var iconBase = '../images/icon-marker.png';
+    var iconBase = '../images/icon-dot.png';
     var infowindow = new google.maps.InfoWindow();
     var marker, i;
 
